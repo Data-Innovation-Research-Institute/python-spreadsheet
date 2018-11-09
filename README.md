@@ -75,3 +75,21 @@ A shortcut for setting the value of a single cell and advancing to the first cel
 spreadsheet.set_values([1])
 
 ```
+
+### Saving Spreadsheets
+
+The ```save``` method is provided as a convenience that wraps the ```save``` method of the underlying openpyxl Workbook:
+
+```python
+spreadsheet.save("Stats.xlsx")
+
+```
+
+### The openpyxl Workbook
+
+The underlying openpyxl Workbook is available using the ```workbook``` property:
+
+```python
+spreadsheet.workbook
+
+```
