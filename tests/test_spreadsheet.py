@@ -5,11 +5,34 @@ from spreadsheet import Spreadsheet
 
 class SpreadsheetTests(unittest.TestCase):
 
+    def test_get_sheet(self):
+        spreadsheet = Spreadsheet()
+        self.assertFalse('Stats' in spreadsheet.workbook.sheetnames)
+        sheet = spreadsheet.get_sheet('Stats')
+        self.assertEqual(sheet.title, 'Stats')
+
     def test_select_sheet(self):
         spreadsheet = Spreadsheet()
         self.assertNotEqual(spreadsheet.current_sheet().title, 'Stats')
         spreadsheet.select_sheet('Stats')
         self.assertEqual(spreadsheet.current_sheet().title, 'Stats')
+
+    def test_advance_column(self):
+        spreadsheet = Spreadsheet()
+        self.assertEqual(spreadsheet.current_cell(), 'A1')
+        spreadsheet.advance_column()
+        self.assertEqual(spreadsheet.current_cell(), 'B1')
+        spreadsheet.advance_column()
+        self.assertEqual(spreadsheet.current_cell(), 'C1')
+
+    def test_advance_row(self):
+        spreadsheet = Spreadsheet()
+        spreadsheet.advance_column()
+        spreadsheet.advance_column()
+        spreadsheet.advance_column()
+        self.assertEqual(spreadsheet.current_cell(), 'D1')
+        spreadsheet.advance_row()
+        self.assertEqual(spreadsheet.current_cell(), 'A2')
 
     def test_cells(self):
         spreadsheet = Spreadsheet()
