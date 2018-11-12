@@ -5,6 +5,12 @@ from spreadsheet import Spreadsheet
 
 class SpreadsheetTests(unittest.TestCase):
 
+    def test_select_sheet(self):
+        spreadsheet = Spreadsheet()
+        self.assertNotEqual(spreadsheet.current_sheet().title, 'Stats')
+        spreadsheet.select_sheet('Stats')
+        self.assertEqual(spreadsheet.current_sheet().title, 'Stats')
+
     def test_cells(self):
         spreadsheet = Spreadsheet()
         self.assertEqual(spreadsheet.current_cell(), 'A1')
