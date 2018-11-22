@@ -12,6 +12,9 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/DrJeffreyMorgan/python-spreadsheet.git",
     packages=setuptools.find_packages(),
+    install_requires=[
+          'openpyxl',
+    ],
     classifiers=[
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
