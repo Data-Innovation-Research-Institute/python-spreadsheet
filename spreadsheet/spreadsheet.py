@@ -18,7 +18,9 @@ class Spreadsheet:
         self.column = 1
 
     def letter(self, index):
-        return self.alphabet[index]
+        repeat = int(index / len(self.alphabet)) + 1
+        index = index % len(self.alphabet)
+        return self.alphabet[index] * repeat
 
     def current_cell(self):
         """
