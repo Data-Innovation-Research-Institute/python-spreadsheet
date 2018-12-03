@@ -1,6 +1,6 @@
 # python-spreadsheet
 
-![Travis (.org)](https://img.shields.io/travis/DrJeffreyMorgan/python-spreadsheet.svg)
+![Travis (.org)](https://img.shields.io/travis/Data-Innovation-Research-Institute/python-spreadsheet.svg)
 
 A wrapper around the openpyxl Workbook that uses a typewriter style write-and-advance metaphor. Cell values are set without needing to explicitly state column/row coordinates such as A1 and D6.
 
