@@ -10,7 +10,7 @@ setuptools.setup(
     description="A wrapper around the openpyxl Workbook that provides a typewriter style write-and-advance metaphor.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/DrJeffreyMorgan/python-spreadsheet.git",
+    url="https://github.com/Data-Innovation-Research-Institute/python-spreadsheet.git",
     packages=setuptools.find_packages(),
     install_requires=[
           'openpyxl',

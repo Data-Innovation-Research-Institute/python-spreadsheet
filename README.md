@@ -7,7 +7,7 @@ A wrapper around the openpyxl Workbook that uses a typewriter style write-and-ad
 ## Install
 
 ```bash
-pip install git+https://github.com/DrJeffreyMorgan/python-spreadsheet.git
+pip install git+https://github.com/Data-Innovation-Research-Institute/python-spreadsheet.git
 ```
 
 ## Use
