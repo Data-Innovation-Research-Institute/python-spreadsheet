@@ -1,5 +1,6 @@
 import string
-from openpyxl import Workbook
+from openpyxl import Workbook, utils
+# from openpyxl.utils import get_column_letter
 
 
 class Spreadsheet:
@@ -17,10 +18,9 @@ class Spreadsheet:
         self.row = 1
         self.column = 1
 
-    def letter(self, index):
-        repeat = int(index / len(self.alphabet)) + 1
-        index = index % len(self.alphabet)
-        return self.alphabet[index] * repeat
+    @staticmethod
+    def letter(index):
+        return utils.get_column_letter(index + 1)
 
     def current_cell(self):
         """

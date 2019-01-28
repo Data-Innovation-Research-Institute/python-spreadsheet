@@ -10,9 +10,11 @@ class SpreadsheetTests(unittest.TestCase):
         self.assertEqual(spreadsheet.letter(0), 'A')
         self.assertEqual(spreadsheet.letter(25), 'Z')
         self.assertEqual(spreadsheet.letter(26), 'AA')
-        self.assertEqual(spreadsheet.letter(51), 'ZZ')
-        self.assertEqual(spreadsheet.letter(52), 'AAA')
-        self.assertEqual(spreadsheet.letter(77), 'ZZZ')
+        self.assertEqual(spreadsheet.letter(27), 'AB')
+        self.assertEqual(spreadsheet.letter(51), 'AZ')
+        self.assertEqual(spreadsheet.letter(52), 'BA')
+        self.assertEqual(spreadsheet.letter(77), 'BZ')
+        self.assertEqual(spreadsheet.letter(78), 'CA')
 
     def test_get_sheet(self):
         spreadsheet = Spreadsheet()
